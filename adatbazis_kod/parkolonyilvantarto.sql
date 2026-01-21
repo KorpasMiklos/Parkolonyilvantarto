@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Nov 22. 12:30
+-- Létrehozás ideje: 2026. Jan 21. 12:19
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -35,14 +35,6 @@ CREATE TABLE `berles` (
   `berles_vege` date DEFAULT NULL,
   `ar` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- A tábla adatainak kiíratása `berles`
---
-
-INSERT INTO `berles` (`id`, `parkolo_id`, `tulaj_id`, `berles_kezdete`, `berles_vege`, `ar`) VALUES
-(1, 10, 2, '2025-11-22', '2025-11-23', 2000.00),
-(2, 9, 3, '2025-11-22', '2025-11-23', 6000.00);
 
 --
 -- Eseményindítók `berles`
@@ -86,7 +78,8 @@ INSERT INTO `jarmu` (`id`, `rendszam`, `szin`, `tipus`, `tulajdonos`) VALUES
 (9, 'YZA-123', 'szürke', 'Fiat', 'Nagy Zoltán'),
 (10, 'BCD-456', 'sárga', 'Renault', 'Lakatos István'),
 (11, 'XXX-111', 'fekete', 'BMW', 'Horváth László'),
-(12, 'XXX-222', 'szürke', 'Mazda', 'Horváth László');
+(12, 'XXX-222', 'szürke', 'Mazda', 'Horváth László'),
+(13, 'AAA-123', 'piros', 'Nissan', 'Csaszi');
 
 -- --------------------------------------------------------
 
@@ -102,14 +95,6 @@ CREATE TABLE `parkolas` (
   `parkolas_vege` datetime DEFAULT NULL,
   `parkolas_idotartama` int(11) GENERATED ALWAYS AS (timestampdiff(MINUTE,`parkolas_kezdete`,`parkolas_vege`)) STORED
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- A tábla adatainak kiíratása `parkolas`
---
-
-INSERT INTO `parkolas` (`id`, `jarmu_id`, `parkolo_id`, `parkolas_kezdete`, `parkolas_vege`) VALUES
-(2, 6, 7, '2025-11-22 11:40:10', '2025-11-22 13:40:10'),
-(3, 7, 5, '2025-11-22 12:10:10', '2025-11-22 16:10:10');
 
 --
 -- Eseményindítók `parkolas`
@@ -139,17 +124,26 @@ CREATE TABLE `parkolo` (
 --
 
 INSERT INTO `parkolo` (`id`, `allapot`) VALUES
-(1, 0),
-(2, 0),
-(3, 0),
+(1, 1),
+(2, 1),
+(3, 1),
 (4, 0),
-(5, 1),
+(5, 0),
 (6, 0),
-(7, 1),
+(7, 0),
 (8, 0),
 (9, 1),
-(10, 1),
-(11, 0);
+(10, 0),
+(11, 0),
+(12, 0),
+(13, 0),
+(14, 0),
+(15, 0),
+(16, 0),
+(17, 0),
+(18, 0),
+(19, 0),
+(20, 0);
 
 -- --------------------------------------------------------
 
@@ -242,25 +236,25 @@ ALTER TABLE `parkolotulaj`
 -- AUTO_INCREMENT a táblához `berles`
 --
 ALTER TABLE `berles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT a táblához `jarmu`
 --
 ALTER TABLE `jarmu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT a táblához `parkolas`
 --
 ALTER TABLE `parkolas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT a táblához `parkolo`
 --
 ALTER TABLE `parkolo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT a táblához `parkolotulaj`
