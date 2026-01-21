@@ -1,0 +1,13 @@
+A mi projektünk egy parkolónyilvántartó rendszer megvalósítása volt. Azért erre a projektre esett a választásunk, mivel találtunk egy olyan valós problémát, amely nap mint nap nehezíti a diákok, tanárok, itt dolgozók és a szülők életét. Bizonyára ti is észrevettétek, hogy reggel, amikor érkeztek az iskolába, sokszor nincs parkoló, vagy nehézkes találni egy szabad helyet. Mi erre szerettünk volna egy megfelelő megoldást találni, amellyel gyorsabbá és egyszerűbbé tehetjük a parkolóhelyet keresők dolgát.
+
+A projektünk megvalósításához elsősorban kiválasztottuk az erre alkalmas parkolóterületet, amely az iskolánk előtti parkoló. Kisebb ötletelés után eldöntöttük, hogy milyen alkalmazásokat és programokat szeretnénk használni a projektünk megvalósításához. A megvalósítást az ER-modell megalkotásával kezdtük, majd ez alapján készítettünk egy UML-ábrát, ami az adatbázisunk felépítésének alapját képezte.
+
+A projekt megvalósítására használtuk a GitHub verziókezelőt, amely segítségével eltároltuk a projektünket és a hozzá tartozó dokumentumokat. A GitHubnak köszönhetően a csapat összes tagja könnyedén elérte a projekt dokumentumait és a programozási kódot, valamint egyszerűen tudtuk fejleszteni és naprakésszé tenni.
+
+A projektünk fejlesztését három nagy szegmensre osztottuk: adatbázis létrehozására, ami az adatok tárolásáért felel; backend oldali programozásra, amely a szerverrel való kommunikációért felelős; és frontend programozásra, amely a weboldal vizuális megjelenéséért felel.
+
+Az adatbázis létrehozásához MySQL adatbázis-kezelő rendszert és a XAMPP programot használtuk. A backend oldali kód megírásához a JavaScript programozási nyelvet és a Node.js futtatókörnyezetet használtuk. A JavaScript a backend logika megírására szolgált, míg a Node.js lehetővé tette a JavaScript kód szerveroldali futtatását.
+
+A frontend, vagyis a felhasználói oldali kód Angular keretrendszerrel készült. Az Angular egy TypeScript alapú keretrendszer, amely dinamikus, egyoldalas webalkalmazások (SPA) fejlesztését teszi lehetővé. A felhasználói felület kialakítását, az adatok megjelenítését és a backenddel való kommunikációt az Angular tette lehetővé.
+
+A projektünk során továbbá használtuk még a Discord alkalmazást kommunikációra.
