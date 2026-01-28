@@ -1,0 +1,80 @@
+Node megértése
+A Node egy nyílt forráskódú eszköz, ami azt jelenti, hogy bárki ingyenesen megtekintheti, módosíthatja és megoszthatja kódját. Többplatformos is, így különböző operációs rendszereken működik, például Windows, macOS és Linux rendszeren. A Node egy futási idő, ami azt jelenti, hogy környezetet biztosít a JavaScript kód futtatásához a böngészőn kívül, általában a JavaScriptet csak a webböngészőkben használják olyan dolgokhoz, mint az interaktív gombok vagy animációk. A Node segítségével a fejlesztők JavaScriptet használhatnak szerveroldali alkalmazások, például webhelyek vagy API-k létrehozására.
+
+A Node a Chrome V8-as verziójára épül JavaScript motor, egy olyan technológia, amely a JavaScriptet gépi kóddá alakítja, amely az a nyelv, amelyet a számítógép ért. Ez a folyamat gyorsabbá és hatékonyabbá teszi a JavaScript futtatását. Emiatt a sebesség miatt a Node-ot könnyűnek (nem igényel sok erőforrást) és hatékonynak (minimális többletköltséggel sokat megtesz) írják le. Különösen alkalmas méretezhető alkalmazások létrehozására, ami olyan programokat jelent, amelyek több felhasználót vagy adatot képesek kezelni lassítás nélkül.
+
+A Node egyik kiemelkedő jellemzője a nem blokkoló, eseményvezérelt architektúra. Egyszerűen fogalmazva, nem várja meg, amíg az egyik feladat befejeződik, mielőtt elkezdené a másikat. Képzeld el, hogy egyszerre hajtogatod a ruhaneműt és forralsz vizet. Ahelyett, hogy a tűzhely mellett várakoznál, addig hajtogatod a ruhákat, amíg a víz fel nem forr. Hasonlóképpen, a Node vált a feladatok között, maximalizálva a termelékenységet. Ez az oka annak, hogy a Node ideális valós idejű alkalmazásokhoz, például csevegőalkalmazásokhoz, online játékokhoz vagy olyan eszközökhöz, ahol a felhasználók élőben együttműködnek: minden érzékeny marad, még sok felhasználóval is.
+
+___________________________________________________________________________________________________
+
+
+Mi az Angular?
+Az Angular egy webes keretrendszer, amelyet a TypeScript nyelv, és tartalmaz egy CLI-t, egy nyelvi szolgáltatást, egy hibakereső eszközt és egy gazdag gyűjteményt az első féltől származó könyvtárakból.
+
+A dobozból biztosított Angular keretrendszerben szereplő könyvtárakat első féltől származó könyvtáraknak nevezzük.
+
+Az Angular lehetővé teszi a fejlesztők számára, hogy méretezhető webalkalmazásokat készítsenek a TypeScripttel, a JavaScript szigorú szintaktikai szuperkészletével, amelyről itt fogunk tanulni 2. fejezet, A TypeScript bevezetése.
+
+A hivatalos Angular dokumentáció a címen található https://angular.dev.
+
+A hivatalos Angular dokumentáció a legfrissebb forrás az Angular fejlesztéshez. Előnyösebb más külső erőforrásokkal szemben használni, miközben az Angular segítségével fejleszt.
+
+A Google létrehozta az Angular-t. Az első verzió, az 1.0 2012-ben jelent meg, és a neve SzögletesJS. SzögletesJSegy JavaScript keretrendszer volt, és a vele készült webalkalmazások JavaScriptben készültek.
+
+2016-ban az Angular csapata úgy döntött, hogy forradalmi változást hajt végre az AngularJS-ben. Együttműködtek a Microsoft TypeScript csapatával, és bevezették a TypeScript nyelvet a keretrendszerbe. A keretrendszer következő verziója, a 2.0 TypeScript-ben íródott, és átkeresztelték Szögletes más logóval, mint az AngularJS.
+
+2022-ben az Angular az evolúciós fejlődés új korszakába lépett, amelyet a Szögletes reneszánsz. Ebben az időszakban a keretrendszer lendületet vett a webfejlesztésben azáltal, hogy jelentős újításokat vezetett be, amelyek a fejlesztésre összpontosítottak Fejlesztői tapasztalat (DX) és az alkalmazás teljesítményének optimalizálása, mint például
+
+Egyszerű és modern megközelítés az Angular alkalmazások készítéséhez
+Továbbfejlesztett reaktivitási minták az alkalmazás állapotának hatékony kezeléséhez
+Az integrációja Szerveroldali renderelés (SSR) technikáka teljesítmény javítása érdekében
+A szögletes reneszánsz korszak egyik fő mérföldköve volt Szögletes 17, amikor az Angular csapata úgy döntött, hogy új logóval és színekkel ruházza át a keretrendszert, tükrözve a közelmúlt változásait, és meghatározva a jövőbeli fejlesztések jövőképét.
+
+Ebben a könyvben kitérünk Szögletes 19, a legújabb szak stabil az Angular keretrendszer verziója. Az AngularJS 2022-ben érte el élettartama végét, és már nem támogatja és tartja karban az Angular csapata.
+
+Az Angular a legmodernebb webes szabványokon alapul, és támogatja az összes örökzöld böngészőt. Az egyes böngészők konkrét verziótámogatásáról további részleteket a címen talál https://angular.dev/reference/versions#browser-support.
+
+A következő részben megismerjük az Angular webfejlesztéshez való választásának előnyeit.
+
+Miért válassza az Angular-t?
+A Szögletes ereje a keretrendszer a következő jellemzők kombinációján alapul:
+
+A keret fő pillérei:
+Cross-platform
+Hihetetlen szerszámozás
+Könnyű onboarding
+
+_______________________________________________________________________________________________
+
+JavaScript alapvető
+A JavaScript egy programozás nyelv, amely számos funkciót tartalmaz webes alkalmazások készítéséhez. Ebben a részben újra áttekintjük és felfrissítjük ismereteinket a legalapvetőbbekről, mivel ezek közvetlenül összefüggenek a TypeScript és az Angular fejlesztéssel. A TypeScript a JavaScript szintaktikai szuperkészlete, ami azt jelenti, hogy olyan funkciókat ad hozzá, mint a típusok, interfészek és generikumok. Részletesebben megvizsgáljuk a következő JavaScript funkciókat:
+
+Változó deklaráció
+Függvényparaméterek
+Nyílfüggvények
+Opcionális láncolás
+Nullish összeolvadás
+Osztályok
+Modulok
+
+_______________________________________________________________________________________________________
+
+
+Mi az a TypeScript?
+Átalakítása kicsia vastag monolitikus kliensek webalkalmazásai lehetetlenek voltak a korábbi JavaScript-verziók korlátai miatt. Dióhéjban a nagyméretű JavaScript alkalmazások komoly karbantarthatósági és skálázhatósági problémákkal küzdöttek, amint méretük és összetettségük nőtt. Ez a probléma egyre fontosabbá vált, mivel az új könyvtárak és modulok zökkenőmentes integrációt igényeltek alkalmazásainkba. Az interoperabilitás megfelelő mechanizmusainak hiánya nehézkes megoldásokhoz vezetett.
+
+E nehézségek leküzdésére a Microsoft felépítette a JavaScript nyelv szuperkészletét, amely statikus típusellenőrzés, jobb eszközök és kódelemzés segítségével alacsonyabb hibaterületű vállalati alkalmazásokat készíthet. A TypeScript 1.0-t 2014-ben vezették be. Megelőzte a JavaScriptet, ugyanazokat a funkciókat valósította meg, és stabil környezetet biztosított nagyszabású alkalmazások készítéséhez. Opcionális statikus gépelést vezetett be a típusjegyzeteken keresztül, ezáltal biztosítva a típusellenőrzést a fordítási időben, és a hibákat a fejlesztési folyamat korai szakaszában. A deklarációs fájlok támogatása azt is lehetővé tette a fejlesztők számára, hogy leírják moduljaik felületét, hogy más fejlesztők jobban integrálhassák azokat kódmunkafolyamatukba és eszközeikbe.
+
+A hivatalos TypeScript weboldal a címen érhető el https://www.typescriptlang.org. Kiterjedt nyelvi dokumentációt és játszóteret tartalmaz, amely hozzáférést biztosít számunkra egy gyors oktatóanyaghoz, hogy pillanatok alatt felgyorsuljunk a nyelvvel. Tartalmaz néhány kész kódpéldát, amelyek lefedik a nyelv néhány leggyakoribb tulajdonságát.
+
+A JavaScript szuperkészleteként a TypeScript következő projektjében való elfogadásának egyik fő előnye az alacsony belépési korlát. Ha ismeri a JavaScriptet, akkor nagyjából minden készen áll, mivel a TypeScript összes további funkciója opcionális. Célod elérése érdekében bármelyiket kiválaszthatod és bemutathatod. Összességében a következő projektben a TypeScript használatára vonatkozó szilárd érvek hosszú listája található, és mindegyik az Angularra vonatkozik.
+
+Íme egy rövid összefoglaló néhány előnyről:
+
+A kód típusokkal való annotálása biztosítja a különböző kódegységek következetes integrációját, és javítja a kód olvashatóságát és megértését.
+A beépített típusellenőrző a fordítási időben elemzi a kódot, és segít megelőzni a hibákat a kód végrehajtása előtt.
+A típusok használata biztosítja a konzisztenciát az alkalmazásban. Az előző kettővel kombinálva az általános kódhiba-lábnyom hosszú távon minimálisra csökken.
+Az interfészek biztosítják könyvtárai zökkenőmentes és zökkenőmentes integrációját más rendszerekbe és kódbázisokba.
+A különböző IDE-k nyelvi támogatása elképesztő, és olyan funkciók előnyeit élvezheti, mint a kiemelő kód, a valós idejű típusellenőrzés és az automatikus fordítás költség nélkül.
+A szintaxis ismerős a más OOP-alapú háttérrel rendelkező fejlesztők számára, mint például a Java, C# és C++.
+A következő részben megtudhatjuk, hogyan lehet TypeScript alkalmazást fejleszteni és végrehajtani. Szögletesben alkalmazások, nem kell manuálisan végrehajtanunk a TypeScript kódot, mert azt az Angular CLI automatikusan kezeli; azonban jó tudni, hogyan működik a motorháztető alatt.
