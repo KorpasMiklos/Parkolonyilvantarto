@@ -1,0 +1,3 @@
+A projekt témájának kiválasztását egy mindennapi, valós probléma indokolta. Az iskola előtti parkolóterületen gyakran nehéz szabad parkolóhelyet találni, ami jelentős kényelmetlenséget okoz az oda érkezők számára.
+A probléma megoldása érdekében egy parkolónyilvántartó rendszert fejlesztettünk ki, amely az iskola előtti parkolóhelyek kezelését és nyomon követését teszi lehetővé. A rendszer egy webes felületen keresztül valós idejű információt biztosít a parkolóhelyek aktuális állapotáról.
+Emellett a megoldás lehetőséget kínál parkolóhelyek hosszabb távú bérlésére is, amely biztosítja a bérlők számára a garantált parkolási lehetőséget.
