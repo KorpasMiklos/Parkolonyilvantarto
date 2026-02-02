@@ -1,0 +1,100 @@
+___________________________________________
+Learning MySQL, 2nd Edition
+Vinicius M. Grippa, Sergey Kuzmichev
+
+PUBLICATION DATE:
+September 2021
+___________________________________________
+
+Az adatbázis-tervezési folyamat
+Az adatbázis-tervezésnek három fő szakasza van, amelyek mindegyike fokozatosan alacsonyabb szintű leírást készít:
+
+Követelményelemzés
+Először meghatározzuk és leírjuk, hogy mire van szükségünk az adatbázisból, milyen adatokat fogunk tárolni, és hogyan viszonyulnak egymáshoz az adatelemek. A gyakorlatban ez magában foglalhatja az alkalmazási követelmények részletes tanulmányozását és a különböző szerepkörben lévő emberekkel való beszélgetést, akik kapcsolatba lépnek az adatbázissal és az alkalmazással.
+
+Koncepcionális tervezés
+Miután megismertük az adatbázis-követelményeket, az adatbázis-tervezés formális leírásába desztilláljuk azokat. A fejezet későbbi részében látni fogjuk, hogyan használhatjuk a modellezést a koncepcionális terv elkészítéséhez.
+
+Logikai tervezés
+Végül leképezzük az adatbázis-tervet egy meglévő adatbázis-kezelő rendszerre és adatbázis-táblázatokra.
+
+A fejezet végén megvizsgáljuk, hogyan használhatjuk a nyílt forráskódú MySQL Workbench eszközt a koncepcionális terv MySQL adatbázis-sémává alakítására.
+
+Adatbázisok modellezése és tervezése
+
+Egy új adatbázis bevezetésekor gyakori hiba, hogy a fejlesztők a gyors megvalósítás érdekében nem fordítanak kellő figyelmet a tervezési szakaszra. Ez a megközelítés hosszú távon komoly problémákhoz vezethet, például költséges újratervezésekhez, teljesítményromláshoz vagy adatinkonzisztenciákhoz. Az adatbázis-tervezés hasonlítható egy épület tervrajzához: megfelelő tervek nélkül az építkezés kockázatos és nehezen bővíthető. A gondosan megtervezett adatbázis-struktúra lehetővé teszi a későbbi bővítéseket anélkül, hogy az egész rendszert újra kellene építeni.
+
+2.1. A nem megfelelő adatbázis-tervezés problémái
+
+Az adatbázis-tervezés első pillantásra kevésbé izgalmas feladatnak tűnhet, azonban a rendszer stabilitása és teljesítménye szempontjából kulcsfontosságú. Példaként tekintsünk egy egyetemi tanszék hallgatói jegyeit nyilvántartó adatbázist. Egy egyszerű megközelítésben létrehozható egyetlen tábla, amely a hallgatók neveit, a kurzusok nevét és az elért eredményeket tartalmazza.
+
+Ez a megoldás azonban számos problémát vet fel. Előfordulhatnak azonos nevű hallgatók, ami egyértelmű azonosítás nélkül adatértelmezési hibákhoz vezet. Ezt egy mesterséges azonosító (például StudentID) bevezetésével lehet orvosolni. További problémát jelenthet, ha egy hallgató ugyanazt a kurzust több alkalommal is teljesíti, mivel az adatok időbeli sorrendje nem egyértelmű. Ennek megoldására időattribútumokat (év, félév) szükséges bevezetni.
+
+Az ilyen típusú táblák gyakran redundáns adatokat tartalmaznak, például a hallgatók neveit minden egyes kurzusfelvétel esetén. Ez indokolja az adatok szétbontását külön táblákba, például Student_Details és Student_Grades táblákra. Bár ez a megoldás már hatékonyabb, továbbra is szükség van a követelmények alapos elemzésére, mivel további információk (címek, elérhetőségek, beiratkozási adatok) későbbi hozzáadása jelentős szerkezeti módosításokat igényelhet.
+
+2.2. Az adatbázis-tervezés folyamata
+
+Az adatbázis-tervezés három egymásra épülő szakaszból áll:
+
+Követelményelemzés
+A rendszerrel szemben támasztott elvárások, az eltárolandó adatok és azok kapcsolatai kerülnek meghatározásra. Ez gyakran interjúk és dokumentációk elemzésével történik.
+
+Koncepcionális tervezés
+A követelmények formális leírása történik meg, jellemzően modellezési eszközök segítségével. Ebben a szakaszban még nem konkrét adatbázis-kezelő rendszerhez kötődő megoldások születnek.
+
+Logikai tervezés
+A koncepcionális modell leképezése egy adott adatbázis-kezelő rendszer struktúrájára, táblák és kapcsolatok formájában.
+
+2.3. Az entitás–kapcsolat (ER) modell
+
+Az adatbázisok alapvetően entitásokat és az ezek közötti kapcsolatokat tárolják. Egy egyetemi rendszerben például a hallgató és a kurzus entitások, míg a beiratkozás egy kapcsolatként értelmezhető.
+
+Az ER-modell grafikus ábrázolást használ, az entitásokat téglalapok, az attribútumokat oválisok, a kapcsolatokat pedig rombuszok jelölik. Az entitásokat egyedi módon azonosító attribútum(ok) alkotják az elsődleges kulcsot. Amennyiben egyetlen attribútum sem garantálja az egyediséget, mesterséges kulcs alkalmazása indokolt.
+
+Az attribútumok lehetnek:
+
+egyszerűek vagy összetettek,
+
+egyértékűek vagy többértékűek,
+
+illetve kulcsattribútumok.
+
+2.4. Kapcsolatok és kardinalitás
+
+Az entitások közötti kapcsolatok kardinalitása lehet:
+
+egy az egyhez (1:1),
+
+egy a sokhoz (1:N),
+
+sok a sokhoz (M:N).
+
+A sok-sok kapcsolatokat a gyakorlatban köztes entitások segítségével bontjuk fel, amelyek önálló táblaként jelennek meg az adatbázisban.
+
+A kapcsolatokhoz részvételi korlátozások is tartozhatnak: egy entitás részvétele lehet teljes vagy részleges.
+
+2.5. Gyenge és erős entitások
+
+A gyenge entitások létezése egy másik entitástól függ, és önálló elsődleges kulccsal nem rendelkeznek. Az azonosításukhoz szükséges a tulajdonos entitás kulcsa és a saját részleges kulcsuk kombinációja.
+
+2.6. Adatbázis-normalizálás
+
+A normalizálás célja az adatredundancia csökkentése és az adatintegritás biztosítása. A relációs adatbázisok tervezése során leggyakrabban az első három normálformát alkalmazzuk:
+
+Első normálforma (1NF): az attribútumok atomosak, nincs ismétlődő csoport.
+
+Második normálforma (2NF): nincs részleges függőség az összetett kulcs részhalmazától.
+
+Harmadik normálforma (3NF): nincs tranzitív függőség nem kulcsattribútumok között.
+
+A túlzott normalizálás azonban teljesítményproblémákhoz vezethet, ezért az ipari gyakorlatban gyakran alkalmaznak célzott denormalizálást.
+
+2.7. Modellezés MySQL Workbench segítségével
+
+A MySQL Workbench támogatja az ER és EER (Enhanced Entity-Relationship) diagramok készítését, valamint a meglévő adatbázisok visszafejtését. Az EER-diagramok támogatják többek között az öröklődést, specializációt és általánosítást.
+
+A tervezett modellből a Workbench automatikusan képes SQL DDL utasításokat generálni, amelyekkel az adatbázis közvetlenül létrehozható a MySQL szerveren.
+
+2.8. Banki adatbázis modell példa
+
+Egy online banki rendszer esetén tipikus entitások lehetnek az alkalmazottak, fiókok, ügyfelek és számlák. A számlák és ügyfelek, illetve a fiókok és alkalmazottak között sok-sok kapcsolat áll fenn, amelyeket köztes entitásokkal modellezünk. A végső EER-modell egyértelműen ábrázolja az adatbázis szerkezetét és a kapcsolatok típusait.
