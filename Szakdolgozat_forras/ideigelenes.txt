@@ -1,0 +1,427 @@
+Felhasznált technológiák bemutatása és alkalmazásuk a projekt során
+1. Backend technológiák
+1.1 Backend architektúra áttekintése
+
+A backend réteg a szoftveralkalmazás gerincét képezi, felelős az üzleti logika, az adatok feldolgozása és az alkalmazás kliensoldala valamint az adatbázis közötti kommunikáció biztosításáért. A projekt során kliens–szerver architektúrát alkalmaztunk, ahol a frontend HTTP kéréseken keresztül kommunikál a szerveroldali komponensekkel.
+
+A backend architektúra kialakításánál kiemelt szempontok voltak:
+
+Skálázhatóság: a szerver képes kezelni a növekvő felhasználószámot és az adatforgalom növekedését.
+
+Adatintegritás: az adatok konzisztenciája és hitelessége minden tranzakció során biztosított.
+
+Rétegzett architektúra: az üzleti logika, adatkezelés és kommunikáció külön rétegekben valósult meg, így a karbantartás és bővítés egyszerűbb.
+
+A backend réteg modulárisan lett felépítve, elkülönítve a kontrollereket, szolgáltatásokat és adatbázis-interfészeket, ami megkönnyítette az egységtesztelést és a kód újrafelhasználhatóságát.
+
+1.2 MySQL adatbázis-kezelő rendszer (XAMPP környezetben)
+1.2.1 Általános bemutatás
+
+A MySQL egy nyílt forráskódú, relációs adatbázis-kezelő rendszer (RDBMS), amely az SQL (Structured Query Language) szabványra épül. A relációs modell lehetővé teszi az adatok táblákban történő szervezését, a táblák közötti kapcsolatok egyértelmű definiálását, és biztosítja az adatintegritást.
+
+A MySQL előnyei a projekt szempontjából:
+
+Teljesítmény: képes nagymennyiségű adat gyors kezelésére.
+
+Skálázhatóság: horizontális és vertikális skálázás egyaránt lehetséges.
+
+Biztonság: felhasználói jogosultságok és titkosítás támogatása.
+
+Közösségi támogatás: aktív fejlesztői közösség, rengeteg dokumentáció és eszköz.
+
+1.2.2 Hivatalos forrás
+
+Cím: MySQL 8.4 Reference Manual
+
+Szerző: Oracle Corporation
+
+Elérés: https://dev.mysql.com/doc/refman/8.4/en/
+
+1.2.3 Alkalmazás a projektben
+
+A MySQL adatbázist a projektben a perzisztens adatok tárolására használtuk. A XAMPP fejlesztői környezet biztosította a helyi fejlesztéshez szükséges infrastruktúrát, beleértve a MySQL szervert és a PHPMyAdmin kezelőfelületet.
+
+Az adatbázis tervezésekor az alábbi szempontokat követtük:
+
+Normalizálás: csökkentettük az adatok redundanciáját, optimalizáltuk a tárolást.
+
+Kapcsolatok: elsődleges kulcsok (Primary Key) és idegen kulcsok (Foreign Key) használata az adatok közötti referenciális integritás biztosítására.
+
+CRUD műveletek: a backend SQL lekérdezésekkel kezeli az adatok létrehozását, lekérését, frissítését és törlését.
+
+A MySQL erőssége, hogy strukturált és biztonságos adattárolást biztosít, így a backend logika hatékonyan működhetett.
+
+1.3 Node.js futtatókörnyezet
+1.3.1 Általános bemutatás
+
+A Node.js egy nyílt forráskódú, JavaScript futtatókörnyezet szerveroldali alkalmazásokhoz. Az eseményvezérelt, nem blokkoló I/O modell lehetővé teszi a magas teljesítményt és az erőforrások hatékony kihasználását, különösen valós idejű webalkalmazások esetén.
+
+Előnyei:
+
+Egységes fejlesztési nyelv: a frontend és backend kód is JavaScript alapú.
+
+Aszinkron feldolgozás: a szerver egyszerre több kérést képes kezelni blokkolás nélkül.
+
+Gazdag ökoszisztéma: Node.js-hez több mint egymillió modul érhető el a npm csomagkezelőn keresztül.
+
+1.3.2 Hivatalos forrás
+
+Cím: Node.js Documentation
+
+Szerző: OpenJS Foundation
+
+Elérés: https://nodejs.org/en/docs
+
+1.3.3 Alkalmazás a projektben
+
+A Node.js szolgált a backend futtatókörnyezeteként, kezelve:
+
+a frontend HTTP kéréseit,
+
+az adatbázis-műveleteket,
+
+a válaszok visszaküldését.
+
+Egy Express.js szerver keretében szerveztük a REST API végpontokat, biztosítva a kliens–szerver kommunikációt. A Node.js lehetővé tette az egységes JavaScript kód használatát mindkét oldalon, csökkentve a hibák számát és javítva a fejlesztés hatékonyságát.
+
+1.4 Backend fejlesztési és biztonsági szempontok
+
+A backend fejlesztése során különös figyelmet fordítottunk a következőkre:
+
+Hitelesítés és jogosultság-kezelés: JSON Web Token (JWT) alapú felhasználói hitelesítés.
+
+Adatvédelem: titkosítás (bcrypt) a jelszavak tárolására.
+
+Hibatűrés: hibakezelés middleware segítségével, hogy a szerver stabil maradjon.
+
+Loggolás: minden tranzakció naplózása a hibakeresés és monitoring céljából.
+
+2. Frontend technológiák
+2.1 Frontend réteg szerepe
+
+A frontend a felhasználó és az alkalmazás közötti interakciót biztosítja. Feladatai:
+
+Felhasználói felület megjelenítése,
+
+Interakciók kezelése,
+
+Backenddel való kommunikáció biztosítása.
+
+A projekt során a hangsúly strukturált, átlátható és felhasználóbarát felület kialakításán volt, figyelve a reszponzivitásra és a modern webes szabványokra.
+
+2.2 Angular keretrendszer
+2.2.1 Általános bemutatás
+
+Az Angular egy TypeScript-alapú, nyílt forráskódú frontend keretrendszer, melyet a Google fejlesztett. Komponensalapú architektúrája lehetővé teszi nagyobb webalkalmazások strukturált fejlesztését, a kód újrafelhasználhatóságát és a moduláris felépítést.
+
+Előnyök:
+
+Kettős adatkapcsolás (Two-way data binding): a modell és a nézet automatikusan szinkronban van.
+
+Dependency injection: elősegíti a tesztelhetőséget és a moduláris kódot.
+
+Routolás: SPA (Single Page Application) támogatása.
+
+2.2.2 Hivatalos forrás
+
+Cím: Angular Documentation
+
+Szerző: Google Angular Team
+
+Elérés: https://angular.dev/
+
+2.2.3 Alkalmazás a projektben
+
+Az Angular segítségével:
+
+A weboldal különálló komponensekből épült fel (pl. felhasználói profil, adatlista, űrlapok),
+
+Routing modul biztosította az oldalak közötti navigációt,
+
+Service-ek kezelik a backend REST API hívásokat,
+
+Reactive Forms segítségével valósult meg az adatok validálása és hibakezelése a frontend oldalon.
+
+2.3 TypeScript
+2.3.1 Általános bemutatás
+
+A TypeScript a JavaScript statikusan típusos kiterjesztése, amely fordítási időben típusellenőrzést végez.
+
+Előnyök:
+
+Hibák csökkentése a fejlesztési időszakban,
+
+Kód karbantarthatóság és olvashatóság növelése,
+
+Kompatibilitás a modern JavaScript funkciókkal (ES6+).
+
+2.3.2 Hivatalos forrás
+
+Cím: TypeScript Handbook
+
+Szerző: Microsoft TypeScript Team
+
+Elérés: https://www.typescriptlang.org/docs/
+
+2.3.3 Alkalmazás a projektben
+
+A TypeScript használata az Angular miatt elengedhetetlen volt. A szigorú típusosság megakadályozta a gyakori runtime hibákat és javította a kód olvashatóságát.
+
+2.4 HTML és CSS
+2.4.1 Általános bemutatás
+
+HTML (HyperText Markup Language): a weboldalak szerkezetét biztosítja.
+CSS (Cascading Style Sheets): a vizuális megjelenésért és reszponzivitásért felelős.
+
+Előnyök:
+
+Standardizált webes szabványok,
+
+Könnyen bővíthető és testreszabható megjelenés,
+
+Reszponzív dizájn mobil és desktop eszközökre.
+
+2.4.2 Hivatalos források
+
+HTML: WHATWG HTML Living Standard
+
+CSS: W3C CSS Specifications
+
+2.4.3 Alkalmazás a projektben
+
+HTML sablonok: a weboldal struktúráját határozták meg (pl. navigációs menü, űrlapok, táblázatok),
+
+CSS: színpaletta, betűtípusok, reszponzív grid rendszer, hover- és animációs effektek,
+
+Bootstrap integráció: gyors és egységes UI komponensek használata.
+
+2.5 Figma – tervezés
+2.5.1 Általános bemutatás
+
+A Figma egy felhőalapú UI/UX tervezőeszköz, amely lehetővé teszi a felhasználói felületek vizuális tervezését és prototípus készítését.
+A Figma támogatja a valós idejű együttműködést, így a csapat minden tagja egyszerre dolgozhat ugyanazon a projekten, és láthatja a változtatásokat.
+
+Előnyei:
+
+Platformfüggetlen (böngészőben, Windows, Mac, Linux),
+
+Beépített prototípus-készítő és interakciós lehetőségek,
+
+Verziókövetés a tervezésben,
+
+Integráció fejlesztői eszközökkel (pl. Angular, CSS export).
+
+2.5.2 Hivatalos forrás
+
+Cím: Figma Help Center
+
+Szerző: Figma Inc.
+
+Elérés: https://help.figma.com/
+
+2.5.3 Alkalmazás a projektben
+
+A Figma segítségével készítettük el a weboldal vizuális terveit és prototípusait,
+
+Minden komponens és oldal vizuális elrendezését előre meghatároztuk,
+
+A tervek alapján az Angular komponensek gyorsan implementálhatóvá váltak,
+
+Biztosítottuk a reszponzív megjelenést különböző képernyőméreteken.
+
+2.6 Frontend fejlesztési szempontok
+
+A frontend fejlesztés során figyelembe vettük:
+
+Reszponzív dizájn: CSS Grid és Flexbox használatával a mobil- és desktop nézet optimalizálása,
+
+Komponensalapú struktúra: az újrafelhasználható UI komponensek létrehozása,
+
+Állapotkezelés: Angular szolgáltatások (Services) és RxJS observables segítségével,
+
+Felhasználói élmény: intuitív navigáció, gyors betöltési idők és vizuális visszajelzések (pl. gombanimációk, hibaüzenetek).
+
+3. Tesztelés és együttműködés
+3.1 Tesztelési stratégia áttekintése
+
+A tesztelés célja az alkalmazás helyes működésének ellenőrzése és a hibák korai felismerése. Külön kezeltük a backend és frontend tesztelését.
+
+Backend: logika és adatkezelés helyességének ellenőrzése,
+
+Frontend: felhasználói felület és komponensek funkcionalitásának biztosítása,
+
+Automatizált tesztek: lehetővé tették a gyors regressziós tesztelést minden kódváltoztatás után.
+
+3.2 Jest – Backend tesztelés
+3.2.1 Általános bemutatás
+
+A Jest egy JavaScript tesztelési keretrendszer, amely egységtesztek írására és futtatására alkalmas.
+Jellemzői:
+
+Egyszerű konfiguráció,
+
+Snapshot tesztelés a komponensek megjelenésének ellenőrzéséhez,
+
+Mock funkciók támogatása a függőségek izolálásához.
+
+3.2.2 Hivatalos forrás
+
+Cím: Jest Documentation
+
+Szerző: Meta Open Source
+
+Elérés: https://jestjs.io/docs
+
+3.2.3 Alkalmazás a projektben
+
+Backend metódusok és API végpontok tesztelése,
+
+CRUD műveletek helyességének ellenőrzése,
+
+Aszinkron műveletek és adatbázis-interakciók szimulálása mock objektumokkal.
+
+3.3 Jasmine és Karma – Frontend tesztelés
+3.3.1 Általános bemutatás
+
+Jasmine: viselkedésvezérelt tesztelési keretrendszer JavaScripthez.
+
+Karma: tesztek futtatásáért felelős környezet, automatikus tesztelést biztosít különböző böngészőkben.
+
+3.3.2 Hivatalos források
+
+Jasmine: https://jasmine.github.io/
+
+Karma: https://karma-runner.github.io/
+
+3.3.3 Alkalmazás a projektben
+
+Jasmine segítségével frontend komponensek és szolgáltatások viselkedését teszteltük,
+
+Karma biztosította a tesztek automatikus futtatását,
+
+Validáltuk a felhasználói interakciók (űrlapkitöltés, gombnyomás) helyességét.
+
+3.4 GitHub – Verziókezelés
+3.4.1 Általános bemutatás
+
+A GitHub egy Git-alapú verziókezelő és együttműködési platform.
+Lehetőséget biztosít:
+
+Kód központi tárolására,
+
+Verziók nyomon követésére,
+
+Csapatmunka koordinálására (pull request, issue tracking).
+
+3.4.2 Hivatalos forrás
+
+Cím: GitHub Documentation
+
+Szerző: GitHub Inc.
+
+Elérés: https://docs.github.com/
+
+3.4.3 Alkalmazás a projektben
+
+Forráskód tárolása és verziókezelése,
+
+Feature branch-ek és pull request-ek használata,
+
+Hibajegyek (issues) és feladatok követése a projekt átláthatósága érdekében.
+
+3.5 Discord – Kommunikáció
+3.5.1 Általános bemutatás
+
+A Discord egy valós idejű kommunikációs platform, amely hang, videó és chat lehetőségeket biztosít.
+
+3.5.2 Hivatalos forrás
+
+Cím: Discord Documentation
+
+Szerző: Discord Inc.
+
+Elérés: https://discord.com/developers/docs
+
+3.5.3 Alkalmazás a projektben
+
+Csapatmunkát támogatta képernyőmegosztással és hangkommunikációval,
+
+Heti státusz megbeszélések és kód review-k lebonyolítása,
+
+Gyors visszajelzések a felmerülő problémákra.
+
+4. Modellezési eszközök
+4.1 UML diagramok
+4.1.1 Általános bemutatás
+
+Az UML (Unified Modeling Language) szabványos modellezési nyelv, amely szoftverrendszerek tervezésére szolgál.
+
+Típusai:
+
+Osztálydiagramok – rendszer struktúrájának ábrázolása,
+
+Use Case diagramok – felhasználói funkciók és interakciók,
+
+Sequence diagramok – komponensek közötti üzenetáramlás.
+
+4.1.2 Hivatalos forrás
+
+Cím: UML Specification
+
+Szerző: Object Management Group
+
+Elérés: https://www.omg.org/spec/UML/
+
+4.1.3 Alkalmazás a projektben
+
+Az UML diagramok segítségével az adatbázis és rendszer szerkezeti elemeit terveztük meg,
+
+Segítettek a backend logika és frontend komponensek kapcsolatának vizualizálásában,
+
+Egységesítették a csapatban a kommunikációt és a fejlesztési folyamatot.
+
+4.2 ER-modell
+4.2.1 Általános bemutatás
+
+Az ER-modell (Entity-Relationship model) az adatbázis logikai szerkezetének megtervezésére szolgál.
+Elemei:
+
+Entitások – adatbázisban tárolt objektumok,
+
+Attribútumok – az entitások tulajdonságai,
+
+Kapcsolatok – az entitások közötti összefüggések.
+
+4.2.2 Hivatalos forrás
+
+Cím: Database System Concepts
+
+Szerzők: Silberschatz, Korth, Sudarshan
+
+Eladás: McGraw-Hill, 2019
+
+Elérés: https://www.mheducation.com/
+
+4.2.3 Alkalmazás a projektben
+
+Az ER-diagram ábrázolta az adatbázis tábláit és kapcsolatait,
+
+Segített a MySQL adatbázis normalizált és logikus felépítésében,
+
+Lehetővé tette a backend CRUD műveletek tervezését és tesztelését.
+
+Összegzés
+
+A projekt során alkalmazott backend, frontend, tesztelési és modellezési eszközök együttesen biztosították a szoftver teljes életciklusának lefedését:
+
+Backend: Node.js, Express, MySQL – stabil és skálázható adatkezelés, üzleti logika.
+
+Frontend: Angular, TypeScript, HTML, CSS, Figma – modern, reszponzív és felhasználóbarát felület.
+
+Tesztelés: Jest, Jasmine, Karma – automatizált és megbízható hibafelismerés.
+
+Együttműködés: GitHub, Discord – verziókezelés, csapatmunka és kommunikáció.
+
+Modellezés: UML, ER-diagram – rendszerszerkezet és adatbázis logikai tervezése.
+
+Ez a kombináció lehetővé tette a professzionális megvalósítást, a könnyű karbantartást és a jövőbeli bővíthetőséget.
