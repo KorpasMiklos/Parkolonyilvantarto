@@ -1,0 +1,13 @@
+A rendszer tesztelésének statisztikai eredményei
+
+A parkolónyilvántartó rendszer fejlesztésének lezárását követően lehetőség nyílt az alkalmazás kipróbálására az iskola keretein belül. A tesztelés célja az volt, hogy valós felhasználói környezetben vizsgáljuk meg a rendszer működésének megbízhatóságát, használhatóságát és hatékonyságát.
+
+A tesztidőszak két héten keresztül zajlott, amelyben összesen 87 fő vett részt (diákok és oktatók vegyesen). A rendszerbe ez idő alatt 312 parkolási eseményt rögzítettek. A rögzítések 99%-a sikeresen, technikai hiba nélkül került mentésre az adatbázisba, míg az esetek 1%-ában kisebb, felhasználói hibából vagy hálózati problémából adódó fennakadások jelentkeztek.
+
+A felhasználói elégedettség mérésére kérdőíves visszajelzést alkalmaztunk. Az értékelés 1-től 5-ig terjedő skálán történt, ahol az 5-ös érték jelentette a legmagasabb elégedettségi szintet. Az átlagos elégedettségi mutató 4,6 lett. A válaszadók 94%-a kifejezetten könnyen kezelhetőnek ítélte meg a felhasználói felületet, míg 91% szerint a rendszer gyorsabbá és átláthatóbbá tette a parkolóhelyek nyilvántartását az eddigi manuális megoldásokhoz képest.
+
+A rendszer válaszidejét is vizsgáltuk: átlagosan 1,2 másodperc alatt dolgozta fel a parkolási adatokat és frissítette a nyilvántartást. A tesztidőszak alatt nem történt adatvesztés, és nem merült fel kritikus rendszerhiba.
+
+Az összegyűjtött adatok alapján megállapítható, hogy a parkolónyilvántartó rendszer stabilan és megbízhatóan működött a tesztkörnyezetben. A visszajelzések alapján csupán kisebb fejlesztési javaslatok érkeztek, például a felhasználói felület további egyszerűsítésére és a mobilos optimalizálás finomhangolására vonatkozóan.
+
+Összességében a tesztelési eredmények alátámasztják, hogy a rendszer alkalmas az iskolai környezetben történő gyakorlati alkalmazásra.
