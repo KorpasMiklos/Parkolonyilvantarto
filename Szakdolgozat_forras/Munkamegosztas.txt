@@ -1,0 +1,11 @@
+Munkamegosztás
+
+A projekt megvalósítása során a csapattagok közötti munkamegosztás tudatos tervezés alapján történt, figyelembe véve az egyéni kompetenciákat és szakmai erősségeket. A feladatok elhatárolása hozzájárult a fejlesztési folyamat átláthatóságához, valamint a hatékony és strukturált munkavégzéshez. Ugyanakkor fontos kiemelni, hogy a projekt minden szakaszában szoros együttműködés valósult meg, és a csapattagok szükség esetén segítették egymás munkáját.
+
+Koprás Miklós elsősorban a frontend fejlesztésért felelt. Feladatai közé tartozott a felhasználói felület megtervezése és megvalósítása, a vizuális elemek kialakítása, valamint a felhasználói élmény optimalizálása. Emellett ő végezte az adatbázis struktúrájának megtervezését és létrehozását is, biztosítva a rendszer megfelelő adatkezelését és konzisztens működését.
+
+Korpás Máté a backend fejlesztési feladatokat látta el. Munkája során megvalósította az alkalmazás szerveroldali logikáját, az adatbázissal való kommunikációt, valamint a szükséges funkcionális folyamatokat. Emellett jelentős szerepet vállalt a projekt dokumentációjának elkészítésében, amely magában foglalta a fejlesztési folyamat bemutatását, a technikai megoldások ismertetését és a rendszer működésének részletes leírását.
+
+Császár Zsombor Gábor a mobilalkalmazás fejlesztéséért volt felelős. Feladatai közé tartozott a mobilplatformra optimalizált alkalmazás megtervezése és kivitelezése, a felhasználói felület mobilos adaptálása, valamint a backend rendszerrel való integráció biztosítása. Munkája révén a projekt eredményeként egy működőképes, mobil eszközökön is használható alkalmazás jött létre.
+
+Összességében elmondható, hogy a csapattagok összehangolt munkája és a feladatok egyértelmű elosztása jelentős mértékben hozzájárult a projekt sikeres megvalósításához.
