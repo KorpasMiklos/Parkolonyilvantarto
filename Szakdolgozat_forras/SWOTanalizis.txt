@@ -1,0 +1,27 @@
+SWOT-analízis
+
+A projekt megvalósítása során SWOT-analízis segítségével vizsgáltuk a fejlesztési folyamat belső és külső tényezőit. Az elemzés célja az volt, hogy feltárja az erősségeket, gyengeségeket, lehetőségeket és veszélyeket, amelyek befolyásolták a mobilalkalmazás fejlesztésének eredményességét.
+
+Erősségek (Strengths)
+
+A projekt egyik legjelentősebb erőssége a csapattagok előzetes szakmai felkészültsége volt. Korábban már jelentős tapasztalatot szereztünk az alkalmazott programozási nyelvek használatában, amely nagymértékben hozzájárult a hatékonyabb és gyorsabb munkavégzéshez. A meglévő tudás nemcsak a fejlesztési folyamat felgyorsítását segítette elő, hanem a felmerülő problémák önálló és strukturált megoldását is támogatta.
+
+További erősséget jelentett a megfelelő csapatmunka és az online térben is gördülékenyen működő együttműködés. Az iskolai keretek között biztosított szakmai támogatás és konzultációs lehetőségek szintén hozzájárultak a projekt sikeres előrehaladásához.
+
+Gyengeségek (Weaknesses)
+
+A fejlesztési folyamat során bizonyos programozási nyelvi hiányosságok is felszínre kerültek, amelyek egyes részfeladatok megvalósítását lassították. Emellett a XAMPP használata során többször tapasztaltunk technikai jellegű hibákat és konfigurációs problémákat, amelyek időszakosan akadályozták a zavartalan munkavégzést.
+
+Nehézséget jelentett továbbá, hogy a csapattagok nem egy településen élnek, így a személyes egyeztetésekre nem volt lehetőség. A közös munka kizárólag iskolai keretek között, illetve online formában valósult meg, ami bizonyos esetekben megnehezítette az azonnali kommunikációt és problémamegoldást.
+
+Lehetőségek (Opportunities)
+
+A projekt lehetőséget biztosított a korábban megszerzett ismeretek további bővítésére és elmélyítésére. Az eddigi tapasztalatok a jövőbeni fejlesztési projektek során is hasznosíthatók, ezáltal növelve a hatékonyságot és a szakmai magabiztosságot.
+
+További lehetőséget jelentett új technológiák és fejlesztési módszerek megismerése a mobilalkalmazás-fejlesztés területén, valamint az online együttműködési eszközök tudatosabb és hatékonyabb alkalmazásának elsajátítása.
+
+Veszélyek (Threats)
+
+A mobilalkalmazás-fejlesztés technológiai környezete rendkívül dinamikusan változik, amely folyamatos szakmai fejlődést és alkalmazkodást igényel. Ennek hiányában fennáll a veszélye annak, hogy a fejlesztett megoldások rövid időn belül elavulttá válnak.
+
+Kockázati tényezőt jelenthetnek továbbá a technikai problémák – például szerverhibák vagy kompatibilitási nehézségek –, amelyek késleltethetik a projekt befejezését. Emellett az időhiány és a tanulmányi kötelezettségekből fakadó túlterheltség is negatívan befolyásolhatja a munkafolyamatot. A kommunikációs nehézségek pedig félreértésekhez és határidőcsúszásokhoz vezethetnek.
