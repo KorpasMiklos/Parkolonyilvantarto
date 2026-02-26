@@ -1,0 +1,24 @@
+A projektünk célja egy olyan mobilalkalmazás fejlesztése volt, amely valós, mindennapi problémára kínál megoldást az iskolai parkolás területén. Az alkalmazás segítségével a felhasználók gyorsan és egyszerűen áttekinthetik a parkoló aktuális állapotát, valamint parkolást is indíthatnak közvetlenül a telefonjukról.
+
+Az alkalmazás indulásakor egy egyedi splash screen jelenik meg, amely a SzakiPark nevet tartalmazza. Ez nemcsak esztétikus megjelenést biztosít, hanem professzionálisabbá is teszi az alkalmazást, miközben a háttérben betöltődnek a szükséges adatok.
+
+A főképernyőn azonnal látható a parkolóhelyek teljes száma, valamint a szabad, foglalt és bérelt helyek aktuális darabszáma. Ezek az adatok automatikusan frissülnek, így a rendszer mindig naprakész információt biztosít.
+
+A parkolóhelyek listában jelennek meg, ahol minden parkoló külön kártyán látható. Színkódok segítik az eligazodást:
+– a zöld a szabad helyeket jelöli,
+– a piros a foglalt helyeket,
+– a narancssárga pedig a bérelt parkolókat.
+
+Ennek köszönhetően a felhasználók egy pillantással fel tudják mérni a parkoló aktuális állapotát.
+
+Ha egy parkolóhely szabad, lehetőség van a foglalás elindítására. A foglalás során egy felugró ablak, vagyis modal jelenik meg, ahol a felhasználó kiválaszthatja a járművét a rendszám alapján, valamint megadhatja a parkolás befejezési időpontját. A rendszer automatikusan rögzíti a parkolás kezdési időpontját az aktuális dátum és idő alapján.
+
+A mentés gomb megnyomásával az alkalmazás elküldi az adatokat a szervernek, ahol azok azonnal eltárolódnak az adatbázisban. Sikeres rögzítés esetén visszajelzést kap a felhasználó, majd a lista frissül, így az új állapot rögtön láthatóvá válik.
+
+A rendszer 10 másodpercenként automatikusan frissíti az adatokat, így több felhasználó esetén is biztosított a valós idejű működés.
+
+Fontos funkció továbbá, hogy a parkolás lejárati időhöz kötött. Amikor a megadott időpont elérkezik, a parkolás automatikusan törlődik a rendszerből, így nem maradnak bent lejárt foglalások, és a parkolóhely újra szabadként jelenik meg.
+
+Az alkalmazást React Native technológiával fejlesztettük, amely lehetővé tette, hogy egyetlen közös kódbázisból Android és iOS platformra is készítsünk mobilalkalmazást. A komponensalapú felépítés, az állapotkezelés és az API-alapú adatkommunikáció biztosítja a rendszer stabil, gyors és bővíthető működését.
+
+Összességében egy modern, átlátható és felhasználóbarát parkolónyilvántartó rendszert hoztunk létre, amely hatékony megoldást kínál az iskolai parkolás szervezésére.
